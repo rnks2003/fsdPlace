@@ -1,0 +1,85 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+}
+table{
+    border: 1px solid white;
+    color: white;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+}
+
+th,td{
+    border: 1px solid white;
+    color: white;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-family: monospace;
+}
+
+main{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-family: monospace;
+}
+
+.cta{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-family: monospace;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+}
+
+form{
+    width: max-content;
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 1em;
+    font-family: monospace;
+}
+
+input{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 1em;
+    margin: 1em;
+    font-family: monospace;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 1em;
+    margin: 1em;
+    font-family: monospace;
+}

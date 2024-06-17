@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fsdPlace</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Member List Tracker</h1>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Description</th>
+          <% if(isAdmin){ %>
+          <td>isActive</td>
+          <td>Actions</td>
+          <% } %>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop through the users and generate table rows -->
+        <% users.forEach(user => { %>
+        <tr>
+          <td><%= user.userName %></td>
+          <td><%= user.email %></td>
+          <td><%= user.description %></td>
+          <% if(isAdmin){ if (user.isActive){%>
+          <td><button style="background-color: aquamarine"></button></td>
+          <% }else{%>
+          <td><button style="background-color: red"></button></td>
+          <%}%>
+          <td>
+            <a href="/update/<%= user.email %>">Update</a>
+            <a href="/delete/<%= user.email %>">Delete</a>
+            <%} %>
+          </td>
+        </tr>
+
+        <% }); %>
+      </tbody>
+    </table>
+    <p id="warning">
+      <%= locals.warning%>
+      <button onclick="clearWarning()">Clear Warning</button>
+    </p>
+    <script>
+      function clearWarning() {
+        document.getElementById("warning").innerHTML = "";
+      }
+    </script>
+    <footer>
+      <p>&copy; 2022 Member List Tracker. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

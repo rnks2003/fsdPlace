@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fsdPlace</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Member List Tracker</h1>
+    </header>
+    <h1>Welcome</h1>
+    <p>Click the links below to navigate to the different pages:</p>
+    <p>
+      <% if (user.isAdmin) { %>
+      <a href="/read">List All Members</a>
+      <a href="/register">Register New Member</a>
+      <a href="/delete">Bulk Delete</a>
+      <% } else { %>
+      <a href="/read">Open Profile</a>
+      <% } %>
+      <a href="/logout">Logout</a>
+    </p>
+    <footer>
+      <p>&copy; 2022 Member List Tracker. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fsdPlace</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Member List Tracker</h1>
+    </header>
+    <form action="/login" method="POST">
+      <label for="email">Email ID:</label>
+      <input type="text" id="email" name="email" value="<%= locals.user %>" />
+      <br /><br />
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><span name="warning"><%= locals.warning %></span><br /><br />
+      <input type="submit" value="Login" />
+    </form>
+    <footer>
+      <p>&copy; 2022 Member List Tracker. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
